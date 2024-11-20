@@ -1,0 +1,14 @@
+{
+    "name": "fourkitchens/sous-warp-whistle",
+    "description": "A recipe that contains Sous Warp Whistle configuration.",
+    "keywords": ["recipe", "Drupal recipes", "drupal recipe", "Warp Whistle"],
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Josué González",
+            "role": "Maintainer"
+        }
+    ],
+    "minimum-stability": "dev"
+}
