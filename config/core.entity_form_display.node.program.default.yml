@@ -13,7 +13,6 @@ dependencies:
     - node.type.program
   module:
     - field_group
-    - field_states_ui
     - media_library
     - paragraphs
     - paragraphs_ee
@@ -161,11 +160,6 @@ content:
         delete_confirmation: true
         show_drag_and_drop: true
         show_collapse_all: true
-      field_states_ui:
-        form:
-          type: ''
-          list: ''
-          add: Add
       paragraphs_ee:
         paragraphs_ee:
           dialog_off_canvas: false
