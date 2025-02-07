@@ -1,0 +1,29 @@
+uuid: 8c0f47a3-3acd-48d5-934d-5b87eed13bfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_image
+    - media.type.image
+    - node.type.news
+id: node.news.field_teaser_image
+field_name: field_teaser_image
+entity_type: node
+bundle: news
+label: 'Teaser Image'
+description: 'Used when this page appears in listings and site-wide search. Also used when sharing on social networks. For best results should be at least 2000px wide.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
