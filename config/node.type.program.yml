@@ -1,0 +1,11 @@
+uuid: 27ad0365-869d-42b4-bcb2-e9ea96f31d6a
+langcode: en
+status: true
+dependencies: {  }
+name: Program
+type: program
+description: 'A content type for Programs.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false
