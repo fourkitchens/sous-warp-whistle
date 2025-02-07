@@ -10,5 +10,10 @@
             "role": "Maintainer"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "fourkitchens/sous-paragraphs": "dev-main",
+        "drupal/address": "^2.0",
+        "drupal/smart_date": "^4.2"
+    }
 }
