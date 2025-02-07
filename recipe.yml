@@ -1,3 +1,9 @@
 name: 'Sous Warp Whistle'
 description: 'A recipe that contains Sous Warp Whistle configuration.'
 type: 'Site'
+recipes:
+  - sous-content-types
+install:
+  - address
+  - datetime
+  - smart_date
