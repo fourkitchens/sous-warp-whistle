@@ -4,7 +4,10 @@ type: 'Site'
 recipes:
   - sous-paragraphs
 install:
+  # Core modules
   - address
   - datetime
   - link
+  - telephone
+  # Contributed modules
   - smart_date
