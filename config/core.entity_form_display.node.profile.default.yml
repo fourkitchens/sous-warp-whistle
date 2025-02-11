@@ -26,6 +26,64 @@ dependencies:
     - text
 third_party_settings:
   field_group:
+    group_tabs:
+      children:
+        - group_default
+        - group_social_media
+        - group_taxonomy
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        direction: horizontal
+        width_breakpoint: 640
+    group_default:
+      children:
+        - title
+        - field_first_name
+        - field_last_name
+        - field_job_title
+        - field_email
+        - field_phone
+        - field_bio
+        - field_image
+      label: Default
+      region: content
+      parent_name: group_tabs
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: open
+        description: ''
+        required_fields: true
+        direction: vertical
+        width_breakpoint: 640
+    group_taxonomy:
+      children:
+        - field_tags
+      label: Taxonomy
+      region: content
+      parent_name: group_tabs
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        formatter: closed
+        description: ''
+        required_fields: true
     group_social_media:
       children:
         - field_profile_linkedin
@@ -34,16 +92,19 @@ third_party_settings:
         - field_profile_instagram
       label: 'Social Media'
       region: content
-      parent_name: ''
-      weight: 8
-      format_type: fieldset
+      parent_name: group_tabs
+      weight: 10
+      format_type: tab
       format_settings:
         classes: ''
         show_empty_fields: false
         id: ''
         label_as_html: false
+        formatter: closed
         description: ''
         required_fields: true
+_core:
+  default_config_hash: CmwpNvqkY1UbcmiQWdsgyya913Alxa0P8T152wXoQ6g
 id: node.profile.default
 targetEntityType: node
 bundle: profile
@@ -51,13 +112,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_bio:
     type: text_textarea
-    weight: 6
+    weight: 15
     region: content
     settings:
       rows: 5
@@ -65,7 +126,7 @@ content:
     third_party_settings: {  }
   field_email:
     type: email_default
-    weight: 4
+    weight: 13
     region: content
     settings:
       placeholder: ''
@@ -73,7 +134,7 @@ content:
     third_party_settings: {  }
   field_first_name:
     type: string_textfield
-    weight: 1
+    weight: 10
     region: content
     settings:
       size: 60
@@ -81,14 +142,14 @@ content:
     third_party_settings: {  }
   field_image:
     type: media_library_widget
-    weight: 7
+    weight: 16
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_job_title:
     type: string_textfield
-    weight: 3
+    weight: 12
     region: content
     settings:
       size: 60
@@ -96,7 +157,7 @@ content:
     third_party_settings: {  }
   field_last_name:
     type: string_textfield
-    weight: 2
+    weight: 11
     region: content
     settings:
       size: 60
@@ -104,7 +165,7 @@ content:
     third_party_settings: {  }
   field_metadata:
     type: metatag_firehose
-    weight: 10
+    weight: 1
     region: content
     settings:
       sidebar: true
@@ -112,14 +173,14 @@ content:
     third_party_settings: {  }
   field_phone:
     type: telephone_default
-    weight: 5
+    weight: 14
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_profile_facebook:
     type: link_default
-    weight: 15
+    weight: 24
     region: content
     settings:
       placeholder_url: ''
@@ -127,7 +188,7 @@ content:
     third_party_settings: {  }
   field_profile_instagram:
     type: link_default
-    weight: 16
+    weight: 25
     region: content
     settings:
       placeholder_url: ''
@@ -135,7 +196,7 @@ content:
     third_party_settings: {  }
   field_profile_linkedin:
     type: link_default
-    weight: 13
+    weight: 22
     region: content
     settings:
       placeholder_url: ''
@@ -143,7 +204,7 @@ content:
     third_party_settings: {  }
   field_profile_twitter:
     type: link_default
-    weight: 14
+    weight: 23
     region: content
     settings:
       placeholder_url: ''
@@ -151,7 +212,7 @@ content:
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 34
     region: content
     settings:
       match_operator: CONTAINS
@@ -161,34 +222,34 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 14
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   published_at:
     type: publication_date_timestamp
-    weight: 13
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 16
+    weight: 7
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 15
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 9
     region: content
     settings:
       size: 60
@@ -196,7 +257,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete_tags
-    weight: 11
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
