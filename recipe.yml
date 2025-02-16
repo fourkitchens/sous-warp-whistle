@@ -11,3 +11,57 @@ install:
   - telephone
   # Contributed modules
   - smart_date
+config:
+  actions:
+    # Update page form display settings
+    core.entity_form_display.node.page.default:
+      simpleConfigUpdate:
+        dependencies:
+          config:
+            - field.storage.node.field_content
+            - node.type.page
+            - paragraphs.paragraphs_type.accordion
+            - paragraphs.paragraphs_type.audio
+            - paragraphs.paragraphs_type.image
+            - paragraphs.paragraphs_type.tabs
+            - paragraphs.paragraphs_type.text
+            - paragraphs.paragraphs_type.text_with_media
+            - paragraphs.paragraphs_type.video
+        settings:
+          handler_settings:
+            target_bundles:
+              image: image
+              text: text
+              accordion: accordion
+              tabs: tabs
+              audio: audio
+              text_with_media: text_with_media
+              video: video
+            target_bundles_drag_drop:
+              accordion:
+                weight: 7
+                enabled: true
+              accordion_item:
+                weight: 8
+                enabled: false
+              tabs:
+                weight: 9
+                enabled: true
+              tab:
+                weight: 10
+                enabled: false
+              image:
+                weight: 5
+                enabled: true
+              text:
+                weight: 6
+                enabled: true
+              text_with_media:
+                weight: 7
+                enabled: true
+              audio:
+                weight: 8
+                enabled: true
+              video:
+                weight: 8
+                enabled: true
