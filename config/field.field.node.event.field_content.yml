@@ -1,11 +1,13 @@
-uuid: 765e69cb-b7a2-4e11-8914-c40a3961a8fb
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_content
     - node.type.event
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.audio
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.tabs
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_with_media
     - paragraphs.paragraphs_type.video
@@ -27,12 +29,30 @@ settings:
     target_bundles:
       image: image
       text: text
+      accordion: accordion
       text_with_media: text_with_media
       video: video
+      audio: audio
+      tabs: tabs
     negate: 0
     target_bundles_drag_drop:
+      accordion:
+        weight: 7
+        enabled: true
+      accordion_item:
+        weight: 8
+        enabled: false
+      audio:
+        weight: 12
+        enabled: true
       image:
         weight: 5
+        enabled: true
+      tab:
+        weight: 14
+        enabled: false
+      tabs:
+        weight: 15
         enabled: true
       text:
         weight: 6
