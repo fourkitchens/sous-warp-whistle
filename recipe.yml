@@ -27,7 +27,7 @@ config:
             - paragraphs.paragraphs_type.text
             - paragraphs.paragraphs_type.text_with_media
             - paragraphs.paragraphs_type.video
-           module:
+          module:
             - entity_reference_revisions  
         settings:
           handler: 'default:paragraph'
@@ -69,4 +69,3 @@ config:
               video:
                 weight: 8
                 enabled: true
-                
