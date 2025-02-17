@@ -4,7 +4,10 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.news
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.audio
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.tabs
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.text_with_media
     - paragraphs.paragraphs_type.video
@@ -28,10 +31,28 @@ settings:
       text: text
       text_with_media: text_with_media
       video: video
+      accordion: accordion
+      audio: audio
+      tabs: tabs
     negate: 0
     target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: true
+      accordion_item:
+        weight: 11
+        enabled: false
+      audio:
+        weight: 12
+        enabled: true
       image:
         weight: 5
+        enabled: true
+      tab:
+        weight: 14
+        enabled: false
+      tabs:
+        weight: 15
         enabled: true
       text:
         weight: 6

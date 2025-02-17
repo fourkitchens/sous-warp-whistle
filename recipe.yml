@@ -27,31 +27,38 @@ config:
             - paragraphs.paragraphs_type.text
             - paragraphs.paragraphs_type.text_with_media
             - paragraphs.paragraphs_type.video
+           module:
+            - entity_reference_revisions  
         settings:
+          handler: 'default:paragraph'
           handler_settings:
             target_bundles:
               image: image
               text: text
-              accordion: accordion
-              tabs: tabs
-              audio: audio
               text_with_media: text_with_media
               video: video
+              accordion: accordion
+              audio: audio
+              tabs: tabs
+            negate: 0
             target_bundles_drag_drop:
               accordion:
-                weight: 7
+                weight: 10
                 enabled: true
               accordion_item:
-                weight: 8
+                weight: 11
                 enabled: false
-              tabs:
-                weight: 9
+              audio:
+                weight: 12
                 enabled: true
-              tab:
-                weight: 10
-                enabled: false
               image:
                 weight: 5
+                enabled: true
+              tab:
+                weight: 14
+                enabled: false
+              tabs:
+                weight: 15
                 enabled: true
               text:
                 weight: 6
@@ -59,9 +66,7 @@ config:
               text_with_media:
                 weight: 7
                 enabled: true
-              audio:
-                weight: 8
-                enabled: true
               video:
                 weight: 8
                 enabled: true
+                
