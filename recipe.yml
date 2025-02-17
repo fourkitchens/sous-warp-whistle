@@ -4,17 +4,17 @@ type: 'Site'
 recipes:
   - sous-paragraphs
 install:
-  # Core modules
+  # Core modules.
   - address
   - datetime
   - link
   - telephone
-  # Contributed modules
+  # Contributed modules.
   - smart_date
 config:
   actions:
-    # Update page form display settings
-    core.entity_form_display.node.page.default:
+    # Add new components to page field_content.
+    field.field.node.page.field_content:
       simpleConfigUpdate:
         dependencies:
           config:
