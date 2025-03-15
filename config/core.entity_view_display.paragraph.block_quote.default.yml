@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_quote.field_annotation
+    - field.field.paragraph.block_quote.field_text
+    - paragraphs.paragraphs_type.block_quote
+  module:
+    - text
+id: paragraph.block_quote.default
+targetEntityType: paragraph
+bundle: block_quote
+mode: default
+content:
+  field_annotation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
