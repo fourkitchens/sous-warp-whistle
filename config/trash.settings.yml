@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: QyHa47o-t9eFu9793X8p0UDrRB7Z4aTMEsDN7g3AddU
+enabled_entity_types:
+  file: {  }
+  media: {  }
+  node: {  }
+  paragraph: {  }
+auto_purge:
+  enabled: false
+  after: null
