@@ -28,7 +28,7 @@ config:
             - paragraphs.paragraphs_type.text_with_media
             - paragraphs.paragraphs_type.video
           module:
-            - entity_reference_revisions 
+            - entity_reference_revisions  
         settings:
           handler: 'default:paragraph'
           handler_settings:
