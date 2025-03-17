@@ -11,6 +11,7 @@ install:
   - telephone
   # Contributed modules.
   - smart_date
+  - trash
 config:
   actions:
     # Add new components to page field_content.
