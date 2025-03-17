@@ -6,6 +6,7 @@ dependencies:
     - node.type.program
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.audio
+    - paragraphs.paragraphs_type.block_quote
     - paragraphs.paragraphs_type.image
     - paragraphs.paragraphs_type.tabs
     - paragraphs.paragraphs_type.text
@@ -34,6 +35,7 @@ settings:
       accordion: accordion
       audio: audio
       tabs: tabs
+      block_quote: block_quote
     negate: 0
     target_bundles_drag_drop:
       accordion:
@@ -45,9 +47,18 @@ settings:
       audio:
         weight: 12
         enabled: true
+      block_quote:
+        weight: 16
+        enabled: true
+      hero:
+        weight: 17
+        enabled: false
       image:
         weight: 5
         enabled: true
+      layout_split:
+        weight: 19
+        enabled: false
       tab:
         weight: 14
         enabled: false
