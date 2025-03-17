@@ -14,6 +14,7 @@
     "require": {
         "fourkitchens/sous-paragraphs": "dev-main",
         "drupal/address": "^2.0",
+        "drupal/autosave_form": "^1.10",
         "drupal/smart_date": "^4.2"
     }
 }
