@@ -22,14 +22,13 @@ config:
             - node.type.page
             - paragraphs.paragraphs_type.accordion
             - paragraphs.paragraphs_type.audio
-            - paragraphs.paragraphs_type.block_quote
             - paragraphs.paragraphs_type.image
             - paragraphs.paragraphs_type.tabs
             - paragraphs.paragraphs_type.text
             - paragraphs.paragraphs_type.text_with_media
             - paragraphs.paragraphs_type.video
           module:
-            - entity_reference_revisions
+            - entity_reference_revisions 
         settings:
           handler: 'default:paragraph'
           handler_settings:
@@ -41,7 +40,6 @@ config:
               accordion: accordion
               audio: audio
               tabs: tabs
-              block_quote: block_quote
             negate: 0
             target_bundles_drag_drop:
               accordion:
@@ -52,9 +50,6 @@ config:
                 enabled: false
               audio:
                 weight: 12
-                enabled: true
-              block_quote:
-                weight: 16
                 enabled: true
               image:
                 weight: 5
