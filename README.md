@@ -21,3 +21,16 @@ Manually applying the recipe to your own project: From your webroot run:
 - `php core/scripts/drupal recipe recipes/sous-warp-whistle`
 - `drush cr`
 - `composer unpack fourkitchens/sous-warp-whistle`
+
+## Components
+
+Warp Whistle contains the following components:
+- Accordion
+- Audio
+- Block Quote
+- Hero
+- Image
+- Tabs
+- Text
+- Text with Media
+- Video
